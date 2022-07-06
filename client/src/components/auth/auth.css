@@ -1,0 +1,281 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #333;
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.or {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 24px 0px 14px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.or::before {
+  margin-right: 8px;
+  content: "";
+  flex: 0 1 100%;
+  border-bottom: 1px solid rgb(193, 199, 198);
+  transform: translateY(-50%);
+}
+
+.or::after {
+  margin-left: 8px;
+  content: "";
+  flex: 0 1 100%;
+  border-bottom: 1px solid rgb(193, 199, 198);
+  transform: translateY(-50%);
+}
+
+
+.register {
+  background: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  width: 360px;
+  min-height: 100px;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+}
+
+.form .heading {
+  font-size: 2rem;
+}
+
+.form .desc {
+  text-align: center;
+  color: #636d77;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 2.4rem;
+  margin-top: 16px;
+  font-weight: 300;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+
+.form-label {
+  font-weight: 700;
+  padding-bottom: 6px;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.form-control {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  outline-color: #de2454;
+  font-size: 1.4rem;
+}
+
+.form-control:hover {
+  border-color: #de2454;
+}
+
+.form-group.invalid.form-control {
+  border-color: #f33a58;
+}
+
+/* .form-group.invalid .form-message {
+  color: #f33a58;
+} */
+
+.form-message {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+  color: #f33a58;
+  text-align: left;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remember-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.remember-text {
+  padding-left: 4px;
+  font-size: 14px;
+}
+
+.form-submit {
+  outline: none;
+  background-color: #de2454;
+  margin: 12px 0 8px;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: #c81d48;
+}
+
+.spacer {
+  margin-top: 36px;
+}
+
+
+.gender {
+  flex-direction: row;
+}
+
+.gender-wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  font-weight: 700;
+  padding-bottom: 6px;
+  padding-left: 40px;
+  line-height: 1.4rem;
+  font-size: 1.4rem;
+}
+
+.gender-item {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #1ac7b6;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #e61212;
+  border: 1px solid #b3b3b3;
+  box-shadow: 2px 2px #ccc;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #bf1d1d;
+  background-color: rgba(242, 238, 238, 0.7);
+}
+
+.button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.form .or-login {
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.link {
+  color: #1f73d3;
+}
+
+.forgot-password {
+  margin-top: 0;
+  font-size: 14px;
+  margin-top: 4px;
+}

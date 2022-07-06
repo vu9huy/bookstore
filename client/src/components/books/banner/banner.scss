@@ -1,0 +1,104 @@
+.banner {
+    margin: 32px 32px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .banner-left {
+        grid-column: span 5;
+        padding: 20px 20px 80px 0;
+
+        .banner-title {
+            font-size: 72px;
+            line-height: 1.2;
+            font-family: TitanOne;
+        }
+
+        .banner-description {
+            font-size: 20px;
+            padding: 20px 12px 20px 0;
+            font-style: italic;
+        }
+
+        .banner-link {
+            margin-left: 20px;
+            width: fit-content;
+            font-size: 18px;
+            letter-spacing: 1px;
+            padding: 13px 20px 10px;
+            outline: 0;
+            border: 1px solid black;
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .banner-link:after {
+            content: "";
+            background-color: #de2454;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 0.2s;
+        }
+
+        .banner-link:hover:after {
+            top: 0px;
+            left: 0px;
+        }
+
+    }
+
+    .banner-right {
+        grid-column: span 7;
+
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 12px;
+        }
+    }
+}
+
+
+
+/* CSS */
+.banner-link {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.banner-link:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.banner-link:hover:after {
+    top: 0px;
+    left: 0px;
+}

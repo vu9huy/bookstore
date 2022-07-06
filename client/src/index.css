@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "MeriendaB";
+    src: local("Merienda"),
+        url("../src/assets/fonts/Merienda/Merienda-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "MeriendaR";
+    src: local("Merienda"),
+        url("../src/assets/fonts/Merienda/Merienda-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TitanOne";
+    src: local("TitanOne"),
+        url("../src/assets/fonts/Merienda/TitanOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+input {
+    outline: none;
+}
